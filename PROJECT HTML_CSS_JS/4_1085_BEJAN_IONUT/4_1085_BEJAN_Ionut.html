@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editare fotografii</title>
+  <link rel="stylesheet" href="4_1085_BEJAN_Ionut.css">
+</head>
+
+<body>
+
+
+  <h1>Editor fotografii</h1>
+
+  <div id="controls">
+    <div class="control-row">
+      <label for="fileInput"> Incarca imaginea:</label>
+      <input type="file" id="fileInput" accept="image/*">
+      <button id="btnSalvare"> Salveaza imaginea</button>
+    </div>
+
+    <div class="control-row">
+      <button id="btnCrop"> Decupeaza selectia</button>
+      <button id="btnSterge"> Sterge Selectia (alb)</button>
+    </div>
+
+    <div class="control-row">
+      <label> Efect culoare:</label>
+      <select id="efectSelect">
+        <option value="greyscale">Grayscale</option>
+        <option value="sepia">Sepia</option>
+        <option value="invert">Invert</option>
+        <option value="blur"> Blur</option>
+      </select>
+
+      <button id="btnEfect">Aplica efect</button>
+    </div>
+
+    <div class="control-row">
+      <label>Scalarea imaginii:</label>
+      <input type="number" id="inputLatime" placeholder="Latime" min="1">
+      <input type="number" id="inputInaltime" placeholder="Inaltime" min="1">
+      <button id="btnScalare">Scaleaza</button>
+    </div>
+
+
+    <div class="control-row">
+      <label> Adauga text:</label>
+      <input type="text" id="textInput" placeholder="Textul...">
+      <input type="number" id="textSize" placeholder="Marime" value="20" min="8" max="200">
+      <input type="color" id="textColor" value="#FF0000">
+      <button id="btnText">Adauga text:</button>
+    </div>
+
+
+    <div class="control-row">
+      <label> Informatii:</label>
+      <span id="info">Incarca o imagine pentru a incepe </span>
+    </div>
+  </div>
+
+  <div id="histogramContainer" style="display:none;">
+    <h3>Histogram culoare(selectare curenta)</h3>
+    <canvas id="histogramCanvas" width="256" height="100"></canvas>
+
+  </div>
+
+  <canvas id="canvas" width="400" height="250"></canvas>
+  <script src="4_1085_BEJAN_Ionut.js"></script>
+</body>
+
+</html>
